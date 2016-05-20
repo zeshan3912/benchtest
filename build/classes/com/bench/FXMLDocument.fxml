@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="409.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bench.FXMLDocumentController">
+   <children>
+      <TabPane prefHeight="409.0" prefWidth="561.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab closable="false" text="Details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="30.0" prefHeight="17.0" prefWidth="81.0" text="Total Page" />
+                        <Label layoutX="24.0" layoutY="58.0" prefHeight="17.0" prefWidth="98.0" text="total Count" />
+                        <Label layoutX="24.0" layoutY="87.0" text="Total Balance" />
+                        <Label fx:id="totalPageLabel" layoutX="189.0" layoutY="30.0" prefHeight="17.0" prefWidth="81.0" text="Total Page" />
+                        <Label fx:id="totalCountLabel" layoutX="193.0" layoutY="58.0" prefHeight="17.0" prefWidth="98.0" text="total Count" />
+                        <Label fx:id="TotalBalanceLabel" layoutX="194.0" layoutY="87.0" text="Total Balance" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Vendor Names">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="vendorNamesTable" prefHeight="379.0" prefWidth="561.0">
+                          <columns>
+                            <TableColumn fx:id="vendorNamesTableCol" editable="false" prefWidth="560.0" text="Vendor Names" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Transcations">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="transcationTableView" layoutY="-1.0" prefHeight="378.0" prefWidth="561.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                          <columns>
+                            <TableColumn fx:id="companyTableCol" prefWidth="150.0" text="Company" />
+                            <TableColumn fx:id="dataTableCol" minWidth="0.0" prefWidth="129.0" text="Date" />
+                              <TableColumn fx:id="ledgerTableCol" minWidth="0.0" prefWidth="129.0" text="Ledger" />
+                              <TableColumn fx:id="amountTableCol" minWidth="0.0" prefWidth="129.0" text="Amount" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
